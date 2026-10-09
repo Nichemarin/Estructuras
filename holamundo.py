@@ -87,7 +87,7 @@ else:
     print(product2)
     print(product1)
 
-"""
+
 estado = int(input("Ingrese el estado: "))
 
 match estado:
@@ -99,3 +99,75 @@ match estado:
         print("Error de servidor")
     case _:
         print("Código de estado desconocido")
+
+
+mi_lista = ["manzana", "pera", "uva", "banana"]
+for fruta in mi_lista:
+    print(fruta)
+
+for letter in "Hipopotomonstrosesquipedialofobia":
+    print(letter)
+
+prices = [100, 250, 75, 500, 150]
+discounted_prices = []
+discount_rate = 0.20
+
+for price in prices:
+    discounted = price * (1-discount_rate)
+    discounted_prices.append(discounted)
+    print(f"Precio origina: {price} -> Con descuento: {discounted}")
+
+for number in range(0,11,2):
+    print(f"Numero: {number}")
+
+for number in range (10,0,-1):
+    print(number)
+print("Despegue")
+
+numero = 6
+print(f"Tabla del {numero}")
+for number in range(1,11):
+    print(f"{numero} x {number} = {numero*number}")
+tasks = [
+    "No hacer nada",
+    "Seguir sin hacer nada",
+    "Pensar en hacer algo pero no hacer nada",
+]
+for index, task in enumerate(tasks, start=1):
+    print(f"{index}. {task}")
+
+    
+lista = [15.50, 20.0, 35.75, 10.0]
+suma = 0
+for precio in lista:
+    suma += precio
+print(suma)
+
+palabra = input("Escribe algo: ")
+contador = 0
+for letra in palabra.lower():
+    if letra in "aeiou":
+        contador += 1
+print(contador)
+
+numero = 8
+print(f"Tabla del {numero}")
+for number in range(1,11):
+    print(f"{numero} x {number} = {numero*number}")
+
+for number in range(20,-1,-2):
+    print(number)
+
+lista = ["Comprar leche", "Llamar al medico", "Estudiar Python"]
+for index, tarea in enumerate(lista, start=1):
+    print(f"{index}. {tarea}")
+
+for i in range(1,4):
+    print(f"Tabla del {i}")
+    for j in range(1,6):
+        result = i*j
+        print(f"\t{i} * {j} = {result}")
+"""
+
+cuadrados = [numero**2 for numero in range(1,6)]
+print(cuadrados)
