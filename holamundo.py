@@ -1,3 +1,5 @@
+import random
+
 """
 print ("Hola mundo")
 
@@ -167,7 +169,115 @@ for i in range(1,4):
     for j in range(1,6):
         result = i*j
         print(f"\t{i} * {j} = {result}")
-"""
 
 cuadrados = [numero**2 for numero in range(1,6)]
 print(cuadrados)
+
+for i in range(1,6):
+    for j in range(i,6):
+        print("* ", end="")
+    print(" ")
+
+
+for i in range(1,6):
+    for j in range(i):
+        aleatorio = (random.randint(0, 9))
+        if(aleatorio % 2 == 0):
+            print("P", end=" ")
+        else:
+            print(aleatorio, end=" ")
+    print(" ")
+
+
+numbers = [1, 2, 3, 7, 14]
+
+index = 0
+found = None
+while index < len(numbers) and found is None:
+    if numbers[index] % 7 == 0:
+        found = numbers[index]
+    index+=1
+print(f"Encontrado con while: {found}")
+
+talla = ["M", "L"]
+colores = ["Rojo", "Azul", "Negro"]
+
+for i in range (len(talla)):
+    for j in range(len(colores)):
+        print(f"{talla[i]} {colores[j]}")
+
+        
+numeros = [1, 2, 3, 4, 5]
+cuadrados = [numero**2 for numero in range(1, len(numeros) + 1)]
+print(cuadrados)
+
+
+palabras = ["sol", "murcielago", "mar", "elefante", "luz"]
+largas = [p for p in palabras if len(p) > 3]
+print(largas)
+
+password = "python123"
+while True:
+    userPassword = input("Escribe la contraseña: ")
+    if password != userPassword:
+        print("Contraseña incorrecta vuelva a intentarlo...")
+    else:
+        print("Contraseña correcta")
+        break
+
+suma = 0
+contador = 0;
+while suma <= 50:
+    numero = int(input("Escriba un numero: "))
+    suma += numero
+    contador += 1
+print(f"Se ingresaron {contador} numeros")
+
+intentos_maximos = 3
+intentos_hechos = 0
+contraseña = 1234
+while intentos_hechos < 3:
+    usuario_contraseña = int(input("Digite su pin: "))
+    if usuario_contraseña != contraseña:
+        intentos_hechos += 1
+        print("Pin incorrecto, vuelvalo a intentar")
+    else:
+        print("Ingresando al cajero...")
+        break
+
+inventario = {"Manzanas" : 50, "peras":30, "naranjas":100}
+frutas = []
+for fruta,cantidad in inventario.items():
+    print(f"{fruta} {cantidad}")
+    frutas.append(fruta)
+print(frutas)
+
+def sumar(p1, p2):
+    return (p1+p2)
+
+print(sumar(3,4))
+
+def factorial(n):
+    if n <= 1:
+        return 1
+    return n*factorial(n-1)
+
+numeros = [1,2,3,4,5]
+cuadrado = list (map(lambda x: x**2, numeros))
+
+print(cuadrado)
+print(factorial(500))
+
+def crear_perfil_usuario(**kwargs):
+    for clave,valor in kwargs.items():
+        print(f"{clave.capitalize()}: {valor}")
+
+crear_perfil_usuario(nombre ="luis", edad = 19, Ciudad = "Madrid", pais = "España")
+"""
+
+def crear_perfil_usuario(nombre, apellido,**kwargs):
+    perfil = {"nombre": nombre, "apellido": apellido}
+    perfil.update(kwargs)
+    return perfil
+
+print(crear_perfil_usuario("Luis", "Taba", edad = 19, ciudad = "Torremolinos", País = "Panchitolandia"))
