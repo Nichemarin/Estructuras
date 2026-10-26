@@ -273,7 +273,6 @@ def crear_perfil_usuario(**kwargs):
         print(f"{clave.capitalize()}: {valor}")
 
 crear_perfil_usuario(nombre ="luis", edad = 19, Ciudad = "Madrid", pais = "España")
-"""
 
 def crear_perfil_usuario(nombre, apellido,**kwargs):
     perfil = {"nombre": nombre, "apellido": apellido}
@@ -281,3 +280,10 @@ def crear_perfil_usuario(nombre, apellido,**kwargs):
     return perfil
 
 print(crear_perfil_usuario("Luis", "Taba", edad = 19, ciudad = "Torremolinos", País = "Panchitolandia"))
+"""
+class producto:
+    def __init__(self, nombre, precio):
+        self.nombre = nombre
+        self.precio = precio
+        self.calidad = "Sin datos"
+    
